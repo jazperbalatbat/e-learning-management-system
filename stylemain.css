@@ -1,0 +1,56 @@
+.bar{
+	padding-top: 90px;
+	background-color: #962D2D;
+	text-align: right;
+	width: 100%;
+}
+.sjhs{
+	font-family: myFirstFont;
+	color: white;
+	text-shadow: 2px 2px #774747;
+	font-size: 220%;
+	text-align: center;
+}
+.dropdown{
+	padding: 0px 10px 10px 0px;
+	display: inline-block;
+}
+.button{
+	background-color: #F95B5B;
+    border: 2px solid #FA4747;
+    color: white;
+    padding: 4px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: serif;
+}
+.button:hover{
+	background-color: #F03737;
+    border: 2px solid #FA4747;
+    color: white;
+    padding: 4px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: serif;
+}
+.contentleft{
+	width: 50%;
+	margin: auto;
+	float: center;
+}
+.carousel-indicators li {
+	visibility: hidden;
+}
+.modal-dialog{
+	padding: 100px 100px 100px 100px;
+}
+.modal-content{
+	width: 500px;
+}
+#right{
+	position: fixed;
+}

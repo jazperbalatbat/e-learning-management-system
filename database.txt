@@ -1,0 +1,126 @@
+CREATE TABLE `teacher_tbl` (
+  `teacher_lastname` varchar(50) NOT NULL,
+  `teacher_firstname` varchar(50) NOT NULL,
+  `teacher_middlename` varchar(50),
+  `teacher_employeenumber` int(20) NOT NULL,
+  `teacher_password` varchar(50) NOT NULL,
+  `teacher_dateofbirth` date NOT NULL,
+  `teacher_femaleradio` int(1),
+  `teacher_maleradio` int(1)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+//new
+CREATE TABLE `teacher_tbl` (
+  `id` int AUTO_INCREMENT PRIMARY KEY,
+  `teacher_lastname` varchar(50) NOT NULL,
+  `teacher_firstname` varchar(50) NOT NULL,
+  `teacher_middlename` varchar(50) DEFAULT NULL,
+  `teacher_employeenumber` int(20) NOT NULL,
+  `teacher_password` varchar(50) NOT NULL,
+  `teacher_dateofbirth` varchar(10) NOT NULL,
+  `teacher_gender` varchar(6) NOT NULL,
+  `teacher_accesscode` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `student_tbl` (
+  `student_slastname` varchar(50) NOT NULL,
+  `student_sfirstname` varchar(50) NOT NULL,
+  `student_smiddlename` varchar(50),
+  `student_slrn` int(20) NOT NULL,
+  `student_spassword` varchar(50) NOT NULL,
+  `student_sgradelevel` int(2) NOT NULL,
+  `student_ssection` varchar(20) NOT NULL,
+  `student_sdateofbirth` varchar(10) NOT NULL,
+  `student_sgender` varchar(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `admin_subjectsidebar_tbl` (
+  `admin_subjectsidebar_tbl_subjectcode` varchar(10) NOT NULL,
+  `admin_subjectsidebar_tbl_subjecttitle` varchar(20) NOT NULL,
+  `admin_subjectsidebar_tbl_subjectclass` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `admin_classsidebar_tbl` (
+  `admin_classsidebar_tbl_section` varchar(20) NOT NULL,
+  `admin_classsidebar_tbl_description` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `admin_teacherclasssidebar_tbl` (
+  `admin_teacherclasssidebar_tbl_select` varchar(50) NOT NULL,
+  `admin_teacherclasssidebar_tbl_add` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `section_seven_tbl` (
+  `section_seven` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `grade_subj_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `grade` int(2) NOT NULL,
+  `subject_code` varchar(100) NOT NULL,
+  `subject_title` varchar(100) NOT NULL,
+  `subject_description` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ALTER TABLE `grade_subj_tbl`
+  ADD PRIMARY KEY (`id`);
+
+CREATE TABLE `teacher_subj_tbl` (
+  `id` int NOT NULL AUTO INCREMENT PRIMARY KEY,
+  `teacher_employeenumber` varchar(200) NOT NULL,
+  `subject_code` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `teacher_section_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `teacher_employeenumber` int(2) NOT NULL,
+  `section` varchar(100) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `grade_section_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `grade` int(2) NOT NULL,
+  `section` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `MC_quiz_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `quiz_number` varchar(450) NOT NULL,
+  `question` varchar(800) NOT NULL,
+  `a_choice` varchar(150) NOT NULL,
+  `b_choice` varchar(150) NOT NULL,
+  `c_choice` varchar(150) NOT NULL,
+  `d_choice` varchar(150) NOT NULL,
+  `answer` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `iden_quiz_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `quiz_number` varchar(450) NOT NULL,
+  `question` varchar(800) NOT NULL,
+  `answer` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `TF_quiz_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `quiz_number` varchar(450) NOT NULL,
+  `question` varchar(800) NOT NULL,
+  `answer` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `quiz_answer_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `question_number` int(3) NOT NULL,
+  `student_slrn` int(20) NOT NULL,
+  `correct_answer` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `quiz_list_tbl` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `quiz_number` int(3) NOT NULL,
+  `quiz_description` varchar(1500) NOT NULL
+  `subject_code varchar` (100) NOT NULL,
+  `teacher_employeenumber` int(20) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -1,0 +1,38 @@
+.header{
+	height: 120px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	background-image: url("header.png");
+	margin: 0px auto;
+
+}
+.content{
+	width: 100%;
+	height: 1500px;
+	margin: 143px auto;
+}
+
+.footer{
+	background-image: url("header.png");
+}
+.sjhs{
+	color: white;
+	text-shadow: 4px 4px #555555;
+}
+.sjhs1{
+	font-size: 50px;
+}
+.dropdown-menu{
+	opacity: 0.8;
+}
+.button{
+	background-color: #F03737;
+    border: 2px solid #FA4747;
+    color: white;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
